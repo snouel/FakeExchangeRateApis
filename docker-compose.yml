@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+
+  fakeapi1:
+    build:
+      context: ./FakeApi1
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_URLS=http://+:5001
+
+  fakeapi2:
+    build:
+      context: ./FakeApi2
+    ports:
+      - "5002:5002"
+    environment:
+      - ASPNETCORE_URLS=http://+:5002
+
+  fakeapi3:
+    build:
+      context: ./FakeApi3
+    ports:
+      - "5003:5003"
+    environment:
+      - ASPNETCORE_URLS=http://+:5003
